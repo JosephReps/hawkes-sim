@@ -23,7 +23,7 @@ const camera = new THREE.PerspectiveCamera(
 camera.position.set(0, 250, 1000);
 scene.add(camera);
 
-// LIGHTING // LIGHTING // LIGHTING // LIGHTING // LIGHTING // LIGHTING // LIGHTING // LIGHTING // LIGHTING 
+// LIGHTING // LIGHTING // LIGHTING // LIGHTING // LIGHTING // LIGHTING // LIGHTING // LIGHTING // LIGHTING //
 
 // Will need to tweak this once polishing off the final product
 
