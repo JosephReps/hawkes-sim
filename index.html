@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spatial Hawkes Simulation</title>
+    <style>
+      /* One anchored panel */
+      .panel {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;               /* uniform vertical spacing */
+      }
+
+      /* A single row */
+      .control {
+        padding: 5px 10px;
+        background: rgba(255,255,255,0.7);
+        border-radius: 4px;
+        font-family: sans-serif;
+        width: 300px;
+
+        display: flex;
+        align-items: center;
+        gap: 8px;               /* spacing inside the row */
+        box-sizing: border-box;
+      }
+
+      .control label { width: 70px; flex: 0 0 70px; }
+      .control input[type="range"] { flex: 1 1 auto; }
+      .control span { width: 40px; text-align: right; flex: 0 0 40px; }
+    </style>
+  </head>
+  <body>
+    
+  <div class="panel">
+    <div class="control">
+      <label for="lambdaSlider">Mu:</label>
+      <input type="range" id="lambdaSlider" min="0" max="20" step="0.1" value="2"/>
+      <span id="lambdaValue">2</span>
+    </div>
+
+    <div class="control">
+      <label for="alphaSlider">Alpha:</label>
+      <input type="range" id="alphaSlider" min="0" max="20" step="0.1" value="1"/>
+      <span id="alphaValue">3</span>
+    </div>
+
+    <div class="control">
+      <label for="betaSlider">Beta:</label>
+      <input type="range" id="betaSlider" min="0" max="20" step="0.1" value="1"/>
+      <span id="betaValue">4</span>
+    </div>
+  </div>
+
+    <canvas class="webgl"></canvas>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
